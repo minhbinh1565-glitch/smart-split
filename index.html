@@ -86,7 +86,7 @@
 
                 <!-- Input thêm thành viên -->
                 <form id="addMemberForm" class="flex gap-2 mb-4">
-                    <input type="text" id="memberInput" placeholder="Nhập tên thành viên (VD: An, Bình, Cường)..." 
+                    <input type="text" id="memberInput" placeholder="Nhập tên thành viên (VD: Ly, Mai, Bình)..." 
                            class="flex-1 px-3.5 py-2 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 transition placeholder:text-slate-400">
                     <button type="submit" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-sm rounded-xl transition flex items-center shadow-sm active:scale-95">
                         <i data-lucide="plus" class="w-4 h-4 mr-1"></i> Thêm
@@ -439,7 +439,7 @@
             loadFromLocalStorage();
             if (members.length === 0) {
                 // Default members
-                members = ["An", "Bình", "Cường", "Dũng"];
+                members = ["Ly", "Mai", "Bình", "Nhi", "Thảo", "Uyên"];
             }
             renderAll();
         };
@@ -472,47 +472,47 @@
 
 
         function loadSampleData() {
-            members = ["An", "Bình", "Cường", "Dũng"];
+            members = ["Ly", "Mai", "Bình", "Nhi", "Thảo", "Uyên"];
             expenses = [
                 {
                     id: "exp_1",
                     title: "Ăn hải sản đêm Đà Lạt",
                     category: "Ăn uống",
-                    payer: "An",
+                    payer: "Ly",
                     amount: 1200000,
-                    participants: ["An", "Bình", "Cường", "Dũng"],
+                    participants: ["Ly", "Mai", "Bình", "Nhi", "Thảo", "Uyên"],
                     splitMethod: "equal",
-                    splits: { "An": 300000, "Bình": 300000, "Cường": 300000, "Dũng": 300000 }
+                    splits: { "Ly": 200000, "Mai": 200000, "Bình": 200000, "Nhi": 200000, "Thảo": 200000, "Uyên": 200000 }
                 },
                 {
                     id: "exp_2",
                     title: "Thanh toán Tiền Khách sạn",
                     category: "Lưu trú",
-                    payer: "Bình",
+                    payer: "Mai",
                     amount: 1600000,
-                    participants: ["An", "Bình", "Cường", "Dũng"],
+                    participants: ["Ly", "Mai", "Bình", "Nhi", "Thảo", "Uyên"],
                     splitMethod: "percent",
-                    splits: { "An": 400000, "Bình": 400000, "Cường": 400000, "Dũng": 400000 }
+                    splits: { "Ly": 400000, "Mai": 400000, "Bình": 400000, "Nhi": 400000 }
                 },
                 {
                     id: "exp_3",
-                    title: "Vé vui chơi Zipline (An & Cường không chơi)",
+                    title: "Vé vui chơi Zipline (Ly & Bình không chơi)",
                     category: "Vui chơi",
-                    payer: "Dũng",
+                    payer: "Nhi",
                     amount: 600000,
-                    participants: ["Bình", "Dũng"],
+                    participants: ["Mai", "Nhi"],
                     splitMethod: "equal",
-                    splits: { "Bình": 300000, "Dũng": 300000 }
+                    splits: { "Mai": 300000, "Nhi": 300000 }
                 },
                 {
                     id: "exp_4",
                     title: "Thuê xe máy & Xăng xe",
                     category: "Di chuyển",
-                    payer: "An",
+                    payer: "Ly",
                     amount: 450000,
-                    participants: ["An", "Bình", "Cường"],
+                    participants: ["Ly", "Mai", "Bình"],
                     splitMethod: "custom",
-                    splits: { "An": 150000, "Bình": 150000, "Cường": 150000 }
+                    splits: { "Ly": 150000, "Mai": 150000, "Bình": 150000 }
                 }
             ];
             saveToLocalStorage();
@@ -1406,3 +1406,6 @@
     </script>
 </body>
 </html>
+
+
+
